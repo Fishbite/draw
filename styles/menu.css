@@ -1,0 +1,86 @@
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#menu {
+    position: fixed;
+    left: -10em;
+    top: 25%;
+    width: 8em;
+    background: rgba(49, 49, 49, 1);    
+    margin: -3em 0 0 0;
+    padding: 0.5em 1.0em 0.5em 2.5em;
+    border-radius: .0 0.5em 0.5em 0;
+    text-align: center;
+    border: 2px outset rgb(27, 27, 27);
+    border-left: 0;
+  }
+
+  #menu li{
+    list-style: none;    
+  }
+
+  #menu-container {
+    display: flex; /* establish flex container*/
+    flex-direction: column; /* make main axis vertical*/
+    justify-content: center; /* center items vertically - in flex-column*/
+    align-items: center; /* center items horizontally - in flex column*/
+  }
+
+  #menu li a {
+    display: flex;
+    flex-direction: row; /* make main axis horizontal*/
+    height: 50px;
+    
+    text-decoration: none;    
+    align-items: center; /* center items vertically - in flex row*/
+    justify-content: center; /* center items horizontally - in flex row*/
+    text-align: center; /* center anything misbehaving - top & bot row of list*/
+    color: white;
+    background: linear-gradient(0deg, 
+    rgb(27, 27, 27) 2px,  
+    rgba(49, 49, 49, 1) 2px, 
+    rgba(49, 49, 49, 1) 94%, 
+    rgb(184, 238, 248));
+    padding: 5px 5px 5px 5px;
+    border-bottom: 2px solid rgb(46, 46, 46);
+    border-right: 1px solid rgb(77, 77, 77);
+    border-left: 1px solid rgb(30, 30, 30);
+
+    border-radius: 5px;
+  }
+
+  /* for accessibility with no mouse or touch screen*/
+  #menu a {
+    position: relative;
+    right: 0;
+  }
+
+  #menu a:focus {
+/* move the <a> element out to the right*/
+    right: -8em;
+    background: rgb(30, 34, 43);
+  }
+
+  #menu a { transition: 0.2s }
+
+  #menu:hover a:focus { 
+ /*ensures <a> element stays put when menu has focus with mouse*/
+    left: 0;
+    background: none;
+  }
+/* back to using a mouse or touch screen!*/
+  #menu li a:hover {
+    text-decoration: none;
+    color: rgb(255, 241, 46);
+    border-bottom: inset 2px solid rgb(2, 3, 3);
+    border-right: 1px solid rgb(32, 32, 32);
+    box-shadow: inset 2px 2px 2px rgb(27, 27, 27);
+  }
+
+  #menu:hover {
+    left: 0;
+  }
+  #menu {transition: 0.2s;
+  }
