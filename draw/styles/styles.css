@@ -1,0 +1,54 @@
+
+body {
+  margin: 0;
+  background-color: rgb(34, 33, 32);
+  background-image: url("/images/darknoise.png");
+  background-size: 25px;
+  background-attachment: fixed; /* fixes the background in place */
+  
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+}
+
+h1 {
+  text-align: center;
+  color: #fc6500;
+}
+#canvas {
+  background: darkgreen;
+}
+
+#intro {
+  margin: 0px auto 30px auto;
+  padding: 5px 25px;
+  background: rgba(255, 255, 255, 0.85);
+  max-width: 550px;
+  border-radius: 2px;
+}
+
+#container {
+  margin: auto;
+  max-width: 250px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 5px;
+  border: solid black 2px;
+  border-radius: 6px;
+}
+
+#cell-1 {
+  text-align: justify;
+}
+
+#input-div {
+  text-align: center;
+}
+
+#inputBox {
+  width: 50px;
+  text-align: center;
+}
+
+#cell-2 {
+  text-align: center;
+  min-height: 150px;
+}
