@@ -1,4 +1,4 @@
-function draw() {
+function draw1() {
     var canvas = document.getElementById('canvas1');
     if (canvas.getContext) {
       var ctx = canvas.getContext('2d');
