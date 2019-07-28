@@ -1,11 +1,11 @@
 <!DOCTYPE html>
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">    
     <link href="styles/menu.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap"
   </head>
 <!-- This code uses an unput type of
 "number" instead of "text" 
@@ -15,15 +15,21 @@ It has the added benefit of providing
 a real-time increase of square size
 and also permits numeric entries only -->  
     <body>
-      <div id="menu-container">
-        <ul id=menu>
-          <h2>menu</h2>
-          <li><a href="index.html">Interactive Square</a>
-            <li><a href="fill-rect.html">Fill Rect</a>
-            <li><a href="fill-clear-stroke.html">Fill/Clear/Stroke Rect</a>
-            <li><a href="stroke-triangle.html">Stroke Triangle</a>
-            <li><a href="stroke-circle-triangle.html">Stroke Circle Triangle</a>
-         </ul>
+        <div class="menu-container">
+            
+            <div class="menu">
+                <div class="menu-overlay">
+                    <ul class="menu-list menu-btn">
+                            <li><a href="index.html">Interactive Square</a>
+                                <li><a href="fill-rect.html">Fill Rect</a>
+                                <li><a href="fill-clear-stroke.html">Fill/Clear/Stroke Rect</a>
+                                <li><a href="stroke-triangle.html">Stroke Triangle</a>
+                                <li><a href="stroke-circle-triangle.html">Stroke Circle Triangle</a>
+                             </ul>                    
+                    </ul>
+                </div>
+                
+            </div>
         </div>
       <h1>JS App to Draw a Square</h1>
       <div id="intro">
@@ -36,7 +42,7 @@ and also permits numeric entries only -->
       </ul></div>
      <div id="container">
        <div id="cell-1">
-         <p>Type a <b>non-negative</b> number in the box to draw a square, or alternatively use the scrolly arrows.</p>
+         <p>Type a <b>positive</b> number in the box to draw a square, or alternatively use the scrolly arrows.</p>
         <div id="input-div">
          <input type="number" id="inputBox" oninput="callSquare()">
         
@@ -52,4 +58,4 @@ and also permits numeric entries only -->
     </div>
   <script src="scripts/main.js"></script>
 </body>
-
+</html>
