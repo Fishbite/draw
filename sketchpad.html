@@ -6,6 +6,7 @@
     <link href="styles/styles.css" rel="stylesheet">    
     <link href="styles/menu.css" rel="stylesheet">
     <link href="styles/draw.css" rel="stylesheet">
+    <link href="styles/sketch.css" rel="stylesheet">
   </head>  
     <body onload="draw()">
         <div class="menu-container">
@@ -25,18 +26,20 @@
                 
             </div>
         </div>
-      <h1>A Simple Sketchpad</h1>
-      <div id="intro">
-        <p>Use of a canvas and JavaScript drawing elements:</p>
-          <ul>
-            <li>An html canvas element of 300 x 225</li>
-            <li>A drawing tool for touch-screen or mouse button down</li>
-            <li>Something else I haven't thought of yet</li>
-            <li>......Ah! A button! <input type="submit" value="Wipe Canvas" onclick="clearCanvas(canvas,ctx);"></li>
-          </ul>
-      </div>
-      <div id="canvas-div">
-        <canvas id="canvas1" width="300" height="225"></canvas>
+      <div id="doodlepadapp">
+        <h1>A Simple Doodle Pad</h1>
+        <div id="intro">
+          <p>Use of a canvas and JavaScript drawing elements:</p>
+            <ul>
+              <li>An html canvas element of 350 x 300</li>
+              <li>A drawing tool for touch-screen or mouse button down</li>
+              <li>Something else I haven't thought of yet</li>
+              <li>......Ah! A button! <input id="clearbutton" type="submit" value="Wipe Canvas" onclick="clearCanvas(canvas,ctx);"></li>
+            </ul>
+        </div>
+        <div id="canvas-div">
+          <canvas id="canvas1" width="350" height="300"></canvas>
+        </div>
       </div>
   <script src="scripts/sketch.js"></script>
 </body>
