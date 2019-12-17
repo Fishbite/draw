@@ -4,7 +4,7 @@ All drawing action happens when the mouse button is held down */
 /* first we need a function to draw a dot when the mouse button
  is pressed down at a specific point on the html canvas */
 
-// parameters are the canvas context & the x / y position & dot size
+// parameters are: the canvas context, the x / y position & dot size
 function drawDot(ctx, x, y, size) {
     // set variables for dot colour to opaque black:
     r = 0;
@@ -32,6 +32,9 @@ let canvas, ctx;
 
 // some variables to keep track of the mouse status:
 let mouseX, mouseY, mouseDown = 0;
+
+//variables to keep track of the touch position
+let touchX, touchY;
 
 // register a mouse click and draw a dot at the current position
 function canvas1_mouseDown() {
@@ -78,17 +81,50 @@ function draw() {
 if (canvas.getContext){
     ctx = canvas.getContext('2d');
     }
-
+// chack we have a valid context to draw on before adding event handlers
+if (ctx) {
 // attach our event handelers to the events
 canvas.addEventListener('mousedown', canvas1_mouseDown, false);
 canvas.addEventListener('mousemove', canvas1_mouseMove, false);
 //listen in the entire window in case mouseUp occurs off canvas
 window.addEventListener('mouseup', canvas1_mouseUp, false);
+
+// React to touch events on the canvas:
+
+canvas.addEventListener('touchStart', canvas1_touchStart, false);
+canvas.addEventListener('touchMove', canvas1_touchMove, false);
+    }
+//
 }
-
-
 
 // clear the canvas context using the canvas width & height:
 function clearCanvas() {
     ctx.clearRect( 0, 0, canvas.clientWidth, canvas.height);
     }
+
+/* ***Start of the touch-screen implementation*** */
+
+// draw a dot when 'touchStart' is detected
+function canvas1_touchStart() {
+    //Update the touch coordinates:
+    getTouchPos();
+
+    drawDot( ctx, touchX, touchY, 4);
+
+    //prevent an additional mousedown triggering
+    event.preventDefault();
+}
+
+// Get the touch position relative to the top left of the canvas
+function getTouchPos(e) {
+    if (!e) {
+        var e = event;
+    }
+    if (e.touches) {
+        if (e.touches.length == 1) { //only deal with one finger
+            var touch = e.touches[0]; // get info for finger 1
+            touchX = touch.pageX-touch.target.offsetLeft;
+            touchY = touch.pageY-touch.target.offsetTop;
+        }
+    }
+}
