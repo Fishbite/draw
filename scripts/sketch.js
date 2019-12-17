@@ -126,10 +126,10 @@ function canvas1_touchMove(e) {
 
 // Get the touch position relative to the top left of the canvas
 function getTouchPos(e) {
-    if (!e) {
+    if (!e)
         var e = event;
-    }
-    if (e.touches) {
+        
+        if (e.touches) {
         if (e.touches.length == 1) { //only deal with one finger
             var touch = e.touches[0]; // get info for finger 1
             touchX = touch.pageX-touch.target.offsetLeft;
