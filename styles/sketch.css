@@ -1,0 +1,27 @@
+#doodlepadapp {
+    /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#canvas1 {
+    
+    /*height:300px; /* don't set height or width here */
+    /* width:400px; /* the dot will run away from the pointer!!! */
+    border:2px solid #888;
+    border-radius:4px;
+    position:relative;/* Necessary for correct mouse co-ords in Firefox */
+}
+/*
+#clearbutton {
+    font-size: 15px;
+    padding: 10px;
+    -webkit-appearance: none;
+    background: #eee;
+    border: 1px solid #888;
+}
+*/
