@@ -90,7 +90,6 @@ canvas.addEventListener('mousemove', canvas1_mouseMove, false);
 window.addEventListener('mouseup', canvas1_mouseUp, false);
 
 // React to touch events on the canvas:
-
 canvas.addEventListener('touchStart', canvas1_touchStart, false);
 canvas.addEventListener('touchMove', canvas1_touchMove, false);
     }
@@ -112,6 +111,16 @@ function canvas1_touchStart() {
     drawDot( ctx, touchX, touchY, 4);
 
     //prevent an additional mousedown triggering
+    event.preventDefault();
+}
+
+// start drawing & prevent the default scrollling when touch movement is detected
+function canvas1_touchMove(e) {
+    //update the touch coordinates
+    getTouchPos(e);
+    // call the drawDot() function
+    drawDot(ctx, touchX, touchY, 4);
+    //prevent a scrolling action
     event.preventDefault();
 }
 
