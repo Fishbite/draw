@@ -1,13 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+/* **** Font rules for the above font ****
+
+  font-family: 'Indie Flower', cursive;
+
+*/
+
 
 body {
   margin: 0;
   background-color: rgb(34, 33, 32);
-  background-image: url("../images/darknoise.png");
+  background-image: url("/images/darknoise.png");
   background-size: 25px;
   background-attachment: fixed; /* fixes the background in place */
   
   font-family: 'Share Tech Mono', monospace;
   font-size: 14px;
+}
+
+.roman {
+  font-family: 'Indie Flower', cursive;
+  font-size: 28px;
 }
 
 h1 {
