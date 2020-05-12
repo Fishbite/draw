@@ -4,16 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">    
     <link href="styles/menu.css" rel="stylesheet">
-  </head>
-<!-- This code uses an input type of
-"number" instead of "text" 
-this gives you scroll arrows, which
-can be used instead of typed values.
-It has the added benefit of providing
-a real-time increase of square size
-and also permits numeric entries only -->  
+  </head> 
     <body>
         <div class="menu-container">
             
@@ -32,31 +26,30 @@ and also permits numeric entries only -->
                 </div>                
             </div>
         </div>
-      <h1>JS App to Draw a Square</h1>
+      <h1>Convert English Numbers to Roman Numerals</h1>
       <div id="intro">
-      <p>Use of a canvas and JavaScript drawing elements:</p>
+      <p>A JavaScript application to convert English numbers to Roman Numerals</p>
       <ul>
-        <li>Take a user input value from an input element type of 'number'</li>
-        <li>Set the canvas size to the input value + 10%</li>
-        <li>Draw a square equal in dimension to the input value</li>
-        <li>Inject text into html &lt;p&gt; elements based on user input value</li>
+        <li>Take a user input & convert to integer value</li>
+        <li>Pass the value through a function</li>
+        <li>Return the value as Roman Numerals</li>
+        <li>NB: Big numbers have a dot after them:</li>
+        <li>.4k = MV. |.. 5k = V. | 10k = X. | 50k = L.</li>
+        <li>100k = C. | 500k = D. | 1m = M.</li>
+        <li>NB: Long numbers will bleed of the edge!</li>
       </ul></div>
      <div id="container">
-       <div id="cell-1">
-         <p>Type a <b>positive</b> number in the box to draw a square, or alternatively use the scrolly arrows.</p>
-        <div id="input-div">
-         <input type="number" id="inputBox" oninput="callSquare()">
-        
-<p id="outputOne">You haven't entered a number.</p>
+        <div id="cell-1">
+         <p>Type a <b>positive</b> number in the box, or alternatively use the scrolly arrows.</p>
+          <div id="input-div">
+            <input type="number" id="inputBox" oninput="callRoman()">        
+            <p id="outputOne">You haven't entered a number.</p>
           </div>
-       </div>
-      <div id="cell-2">
-  <p id="outputTwo">Your square will be below.</p>
-        <div id="canvas-div">
-      <canvas width="0" height="0" id='canvas'></canvas>
         </div>
+      <div id="cell-2" class="roman">
+          <p id="outputTwo" >MMXX</p>
       </div>
     </div>
-  <script src="scripts/main.js"></script>
+  <script src="scripts/roman.js"></script>
 </body>
 </html>
