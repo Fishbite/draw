@@ -1,6 +1,8 @@
 # draw
 A site exploring JS canvas and draw functions with interactivity!
 
+Added a JavaScript program to convert English numbers into Roman Numerals during the COVID19 lockdown.
+
 OK! We only have the first page doing user interaction at the moment, but I hope you get the drift. I'm thinking of doing a similar kind of thing with the other pages - perhaps giving user feedback of the areas of the shapes produced and perhaps an option to view the underlying code without leaving the page. Could be cool, but personally I don't like reading stuff like that on a small screen, some folks do, I know, so it's a maybe.
 
 In the first instance I was just researching into drawing using JavaScript (as a break!). I'd been following a well known course on JS and just thought, well, this is really DIFFICULT! but I was slogging my way through it regardless. Then I thought LETS FIND SOMETHING TO DO WITH THIS before I went insane! So this is my first pitch at putting together a website using JS on top of html & css. Man! I've had to jump through hoops to get here, but this is where it's at, at the moment.
